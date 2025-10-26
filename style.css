@@ -1,0 +1,25 @@
+:root{
+  --bg1:#050013; --bg2:#1a0033; --neon-purple:#a85fff; --neon-cyan:#00ffe0; --glass: rgba(255,255,255,0.04);
+  --max-width:1100px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Poppins', sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#e6e6e6;}
+.container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+.hero{padding:64px 0 40px;position:relative;overflow:hidden;text-align:center}
+.site-logo{max-width:680px;width:86%;height:auto;border-radius:12px;box-shadow:0 10px 40px rgba(0,0,0,0.6);margin:0 auto 12px}
+.tag{color:var(--neon-cyan);margin-top:6px;font-weight:700}
+.subtitle{max-width:900px;margin:18px auto 28px;font-size:1.02rem;color:#d6d6d6}
+.cta{display:inline-flex;gap:12px;align-items:center}
+.btn{padding:12px 20px;border-radius:28px;text-decoration:none;font-weight:700;transition:all .18s}
+.btn.primary{background:linear-gradient(90deg,var(--neon-purple),var(--neon-cyan));color:#070018;border:none}
+.btn.ghost{background:transparent;color:var(--neon-cyan);border:1px solid rgba(0,255,224,0.12)}
+.glitch-wrap{position:absolute;inset:0;pointer-events:none}
+.glitch{position:absolute;left:-10%;top:-5%;width:140%;height:120%;background:linear-gradient(90deg,rgba(168,95,255,0.06),rgba(0,255,224,0.04));filter:blur(50px);animation:float 9s ease-in-out infinite}
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-18px)}100%{transform:translateY(0)}}
+section{padding:60px 0}
+.card{background:var(--glass);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:18px}
+h2{color:var(--neon-cyan);letter-spacing:1px;margin-bottom:14px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.nft-thumb{height:220px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;align-items:center;justify-content:center;font-weight:700;color:#ddd}
+footer{padding:28px;text-align:center;color:#9b9b9b;border-top:1px solid rgba(255,255,255,0.04)}
+@media(max-width:720px){.site-logo{width:92%}.nft-thumb{height:180px}}
