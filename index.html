@@ -2,123 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MetaSouls by KJ - NFT</title>
-  <meta name="description" content="MetaSouls by KJ - NFT — 1,000-piece NFT collection of digital souls. View on OpenSea." />
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MetaSouls | KJ-NFT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#050013; --bg2:#1a0033; --neon-purple:#a85fff; --neon-cyan:#00ffe0; --glass: rgba(255,255,255,0.04);
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:'Poppins', sans-serif;background:linear-gradient(135deg,var(--bg1),var(--bg2));color:#e6e6e6;overflow-x:hidden;}
+    .container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+    .hero{padding:70px 0 40px;position:relative;overflow:hidden;text-align:center}
+    .glitch-wrap{position:absolute;inset:0;pointer-events:none;overflow:hidden;}
+    .glitch{
+      position:absolute;left:-10%;top:-5%;width:140%;height:120%;
+      background:linear-gradient(90deg,rgba(168,95,255,0.08),rgba(0,255,224,0.05));
+      filter:blur(60px);animation:float 8s ease-in-out infinite alternate;
+    }
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-18px)}100%{transform:translateY(0)}}
+
+    .logo-glitch{
+      position:relative;display:inline-block;
+      animation:glitch 3s infinite;
+    }
+    .logo-glitch img{
+      max-width:420px;width:80%;height:auto;border-radius:14px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.6);
+    }
+    @keyframes glitch {
+      0% { filter:hue-rotate(0deg); transform:translate(0,0); }
+      20% { filter:hue-rotate(15deg); transform:translate(-1px,1px); }
+      40% { filter:hue-rotate(-15deg); transform:translate(1px,-1px); }
+      60% { filter:hue-rotate(10deg); transform:translate(0,1px); }
+      80% { filter:hue-rotate(-10deg); transform:translate(-1px,0); }
+      100% { filter:hue-rotate(0deg); transform:translate(0,0); }
+    }
+
+    .tag{color:var(--neon-cyan);margin-top:12px;font-weight:700;font-size:1.1rem;}
+    .subtitle{max-width:900px;margin:18px auto 28px;font-size:1.02rem;color:#d6d6d6}
+    .cta{display:inline-flex;gap:12px;align-items:center}
+    .btn{padding:12px 22px;border-radius:28px;text-decoration:none;font-weight:700;transition:all .18s}
+    .btn.primary{background:linear-gradient(90deg,var(--neon-purple),var(--neon-cyan));color:#070018;border:none}
+    .btn.ghost{background:transparent;color:var(--neon-cyan);border:1px solid rgba(0,255,224,0.12)}
+
+    section{padding:60px 0}
+    .card{background:var(--glass);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:18px}
+    h2{color:var(--neon-cyan);letter-spacing:1px;margin-bottom:14px;text-align:center}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+    .nft-thumb{height:220px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);display:flex;align-items:center;justify-content:center;font-weight:700;color:#ddd}
+    footer{padding:28px;text-align:center;color:#9b9b9b;border-top:1px solid rgba(255,255,255,0.04)}
+    @media(max-width:720px){.logo-glitch img{width:88%}.nft-thumb{height:180px}}
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="glitch-wrap" aria-hidden="true">
-      <div class="glitch"></div>
-      <div class="glitch"></div>
-    </div>
 
-    <div class="container hero-inner">
-      <img src="https://raw.githubusercontent.com/username/metasouls-website/main/assets/logo.jpg" alt="KJ - NFT Logo" class="site-logo">
-      <div class="tag">by KJ - NFT</div>
-      <p class="subtitle">A 1,000-piece NFT collection of digital souls — from chill apes and cosmic lambs to undead kings and neon scientists. Own a piece of the metaverse.</p>
-
+  <div class="hero">
+    <div class="glitch-wrap"><div class="glitch"></div></div>
+    <div class="container">
+      <div class="logo-glitch">
+        <img src="IMG-20251026-WA0014.jpg" alt="KJ-NFT Logo">
+      </div>
+      <div class="tag">MetaSouls by KJ-NFT</div>
+      <p class="subtitle">Where digital spirits transcend imagination — a collection of unique souls living on the blockchain. Each NFT represents a spark of art, emotion, and technology.</p>
       <div class="cta">
-        <a class="btn primary" href="https://opensea.io/0xa5cd469fbe16bfdd5f621ec8e30d9cc6cbba2d73" target="_blank" rel="noopener">View Collection on OpenSea</a>
-        <a class="btn ghost" href="#roadmap">Roadmap</a>
+        <a href="https://opensea.io/0xa5cd469fbe16bfdd5f621ec8e30d9cc6cbba2d73" target="_blank" class="btn primary">View Collection on OpenSea</a>
       </div>
     </div>
-  </header>
-
-  <main>
-    <section id="about" class="container card-section">
-      <h2>About MetaSouls</h2>
-      <div class="card">
-        <p>MetaSouls is a storytelling-driven NFT project built by <strong>KJ - NFT</strong>. Each MetaSoul is a unique avatar — a living identity shaped by lore, rarity traits, and aesthetics drawn from retro neon & cyberpunk culture. Holders gain access to exclusive drops, community governance votes, and future metaverse utilities.</p>
-      </div>
-    </section>
-
-    <section id="showcase" class="container">
-      <h2>Featured Collection</h2>
-      <div class="grid">
-        <article class="card">
-          <div class="nft-thumb">Lazy Ape Commander</div>
-          <h3>Lazy Ape Commander</h3>
-          <p>Calm, confident, and unbothered — an OG of the MetaSouls.</p>
-        </article>
-        <article class="card">
-          <div class="nft-thumb">NeoDoge 3000</div>
-          <h3>NeoDoge 3000</h3>
-          <p>A cybernetic guardian patrolling the blockchain frontier.</p>
-        </article>
-        <article class="card">
-          <div class="nft-thumb">Crown of the Undead</div>
-          <h3>Crown of the Undead</h3>
-          <p>The Skeleton King — eternal swagger and authority.</p>
-        </article>
-        <article class="card">
-          <div class="nft-thumb">Rick of the Neonverse</div>
-          <h3>Rick of the Neonverse</h3>
-          <p>A mad genius rewriting reality with neon circuits.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="roadmap" class="container card-section">
-      <h2>Roadmap</h2>
-      <div class="card roadmap">
-        <div class="road-step"><div class="dot"></div><div><strong>Phase 1 — Genesis Drop</strong><p class="muted">Limited pre-sale (100 pieces) + early whitelist. Social launch & first artwork reveal.</p></div></div>
-        <div class="road-step"><div class="dot"></div><div><strong>Phase 2 — Full Launch</strong><p class="muted">Release full 1,000 MetaSouls, marketplace listings, and community mint events.</p></div></div>
-        <div class="road-step"><div class="dot"></div><div><strong>Phase 3 — Holder Utilities</strong><p class="muted">Airdrops, exclusive art, merch drops, and private Discord channels for holders.</p></div></div>
-        <div class="road-step"><div class="dot"></div><div><strong>Phase 4 — Metaverse & Partnerships</strong><p class="muted">3D avatars, virtual gallery, and collaborations with artists & builders.</p></div></div>
-      </div>
-    </section>
-
-    <section id="team" class="container">
-      <h2>Team</h2>
-      <div class="card team">
-        <div class="member">
-          <div class="avatar">KJ</div>
-          <h4>KJ - NFT</h4>
-          <p>Founder & Lead Artist — pixel and neon aesthetics, world-builder, collector.</p>
-        </div>
-        <div class="member">
-          <div class="avatar">—</div>
-          <h4>Collaborator</h4>
-          <p>Open for artist collaborations — DM on Twitter or join Discord.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="container card-section">
-      <h2>FAQ</h2>
-      <div class="card">
-        <div class="faq-item"><div class="question">What blockchain are you using?</div><div class="answer">MetaSouls will be available on Ethereum with Polygon-compatible options to reduce gas fees.</div></div>
-        <div class="faq-item"><div class="question">How many MetaSouls will be minted?</div><div class="answer">Total supply is 1,000 unique MetaSouls. Early pre-sale will include 100 reserved pieces.</div></div>
-        <div class="faq-item"><div class="question">What utilities do holders get?</div><div class="answer">Exclusive airdrops, whitelist for future drops, access to private Discord channels, and future metaverse avatar upgrades.</div></div>
-      </div>
-    </section>
-
-    <section id="connect" class="container">
-      <h2>Connect</h2>
-      <p style="text-align:center;max-width:820px;margin:0 auto">Follow MetaSouls for the latest drops, community events, and collabs. Join our Discord to participate in whitelist events and AMAs.</p>
-      <div class="socials" style="margin-top:18px">
-        <a href="https://opensea.io/0xa5cd469fbe16bfdd5f621ec8e30d9cc6cbba2d73" target="_blank" rel="noopener">OpenSea</a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener">Twitter</a>
-        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://discord.gg/" target="_blank" rel="noopener">Discord</a>
-      </div>
-    </section>
-  </main>
+  </div>
 
   <footer>
-    © 2025 MetaSouls by KJ - NFT | All Rights Reserved
+    © 2025 KJ-NFT — MetaSouls Project. All Rights Reserved.
   </footer>
 
-  <script>
-    const logo = document.querySelector('.site-logo');
-    if (logo) {
-      setInterval(() => {
-        logo.style.transform = `translate(${(Math.random()-0.5)*6}px, ${(Math.random()-0.5)*6}px) rotate(${(Math.random()-0.5)*1}deg)`;
-        setTimeout(()=>logo.style.transform='translate(0,0)',180);
-      }, 1200);
-    }
-  </script>
 </body>
 </html>
